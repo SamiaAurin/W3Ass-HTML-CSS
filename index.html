@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Assignment-HTML-CSS</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-items">
+            <li><a href="#" class="nav-item"><i class="fas fa-globe"></i>United States</a></li>
+            <li><a href="#" class="nav-item">Trip Boards</a></li>
+            <li><a href="#" class="nav-item">List your property</a></li>
+            <li><a href="#" class="nav-item">Help</a></li>
+            <li><a href="#" class="nav-item">My trips</a></li>
+            <li><a href="#" class="nav-item">Sign in</a></li>
+        </ul>
+    </nav>
+
+    <!-- gallery starts-->
+    <section class="gallery-section">
+        <div class="gallery-nav">
+            <a href="#" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                See all properties
+            </a>
+            <div class="action-buttons">
+                <button class="btn">
+                    <i class="fas fa-share"></i>
+                    Share
+                </button>
+                <button class="btn btn-save">
+                    <i class="fas fa-heart"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+        <!-- images -->
+        <div class="gallery-grid">
+            <div class="gallery-item main-photo">
+                <img src="images/home1.jpg" alt="Deck with mountain view">
+            </div>
+            <div class="gallery-grid-right">
+                <div class="gallery-item">
+                    <img src="images/home2.jpg" alt="Cottage exterior">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/home3.jpg" alt="Living room view">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/home4.jpg" alt="Another living room view">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/home5.jpg" alt="Third living room view">
+                    <div class="photo-count">
+                        <i class="fas fa-images"></i>
+                        30+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery ends-->
+
+    <!-- Properties -->
+    <div class="property-section">
+        <!-- Tabs Section -->
+        <nav class="tabs">
+            <a href="#" class="tab active">Overview</a>
+            <a href="#" class="tab">Amenities</a>
+            <a href="#" class="tab">Policies</a>
+        </nav>
+        
+        <div class="content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Header Section with Title and Rating -->
+                <div class="title-section">
+                    <h6>Entire home</h6>
+                    <h1>Juneau Vacation Home: Stunning View + Beach Access</h1>
+                    <div class="rating">
+                        <span class="rating-score">9.8</span>  Exceptional
+                        <div><a href="#">See all 24 reviews ></a></div>
+                    </div>
+                </div>
+                
+                <!-- Property Details Section -->
+                <div class="property-details">
+                    <!-- Property Info Section with Icons -->
+                    <div class="property-info">
+                        <div class="icon-text">
+                            <i class="fas fa-bed"></i><span>2 bedrooms</span>
+                            <i class="fas fa-users"></i><span>Sleeps 4</span>
+                        </div>
+                        <div class="icon-text">
+                            <i class="fas fa-bath"></i><span>1 bathroom</span>
+                            <i class="fas fa-ruler-combined"></i><span>1155 sq ft</span>
+                        </div>
+                    </div>
+                
+                    <!-- Amenities Section with Icons -->
+                    <div class="amenities">
+                        <h3>Popular amenities</h3>
+                        <div class="amenities-grid">
+                            <div><i class="fas fa-fire"></i> Barbecue grill</div>
+                            <div><i class="fas fa-tree"></i> Outdoor Space</div>
+                            <div><i class="fas fa-utensils"></i> Kitchen</div>
+                            <div><i class="fas fa-washer"></i> Washer</div>
+                            <div><i class="fas fa-car-alt"></i> Parking available</div>
+                            <div><i class="fas fa-tshirt"></i> Dryer</div>
+                        </div>
+                        <a href="#">See all property amenities</a>
+                    </div>
+                    
+                </div>
+                
+                
+                <!-- Explore Area Section -->
+                <section class="explore-area">
+                    <h3>Explore the area</h3>
+                    <img src="map.png" alt="Map of Juneau, Alaska">
+                    <ul>
+                        <li>Auke Bay - 6 min drive</li>
+                        <li>University of Alaska-Southeast - 10 min drive</li>
+                        <li>Mendenhall Golf Course - 14 min drive</li>
+                        <li>Juneau, AK (JNU-Juneau Intl.) - 14 min drive</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Pricing Section -->
+                <div class="price-section">
+                    <p class="price">$134 <span>per night</span></p>
+                    <p class="cancellation">Free cancellation before Mon, Nov 4</p>
+                    <p class="availability">Your dates are available</p>
+                </div>
+                
+                <!-- Booking Section -->
+                <div class="booking-section">
+                    <form class="date-selection">
+                        <label>Start date</label>
+                        <input type="date" value="2024-11-18">
+                        
+                        <label>End date</label>
+                        <input type="date" value="2024-11-20">
+                        
+                        <label>Travelers</label>
+                        <select>
+                            <option>2 travelers</option>
+                        </select>
+                    </form>
+                </div>
+                
+                <!-- Total Section -->
+                <div class="total-section">
+                    <p>Total: <span>$543</span></p>
+                    <a href="#" class="book-now">Book now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -->
+    <div class="rooms-beds">
+        <h3>Rooms & beds</h3>
+        <div class="bedrooms">
+            <div class="bedroom-info">
+                <h4>2 bedrooms <span> (sleeps 4)</span></h4>
+                <div class="bedroom-details">
+                    <div class="room">
+                        <h5>Bedroom 1</h5>
+                        <i class="fas fa-bed"></i> <span>1 Queen Bed</span>
+                    </div>
+                    <div class="room">
+                        <h5>Bedroom 2</h5>
+                        <i class="fas fa-bed"></i> <span>1 Twin Bed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <hr>
+    
+        <div class="bathroom">
+            <h4>1 bathroom</h4>
+            <span>Full Bathroom</span>
+        </div>
+    
+        <hr>
+    
+        <div class="spaces">
+            <h3>Spaces</h3>
+            <div class="spaces-list">
+                <div><i class="fas fa-umbrella-beach"></i> Deck or patio</div>
+                <div><i class="fas fa-utensils"></i> Kitchen</div>
+                <div><i class="fas fa-archway"></i> Balcony</div>
+                <div><i class="fas fa-tree"></i> Garden</div>
+            </div>
+            <a href="#">See all rooms and beds details</a>
+        </div>
+    </div>
+    <!-- About this Property -->
+     <div class="about">
+        <h1>About this property</h1>
+     </div>
+</body>
+</html>
