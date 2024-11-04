@@ -9,6 +9,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.gallery-section,
+.property-section,
+.rooms-beds,
+.about-section,
+.amenities-section,
+.question-box,
+.rule-info {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 /* Navbar CSS*/
 .navbar {
     display: flex;
@@ -40,13 +51,7 @@ body {
 
 /* Navbar CSS end*/
 /* Gallery CSS start */
-.gallery-section,
-.property-section,
-.rooms-beds,
-.about{
-    margin-left: 100px;
-    margin-right: 100px;
-}
+
 .gallery-nav {
     display: flex;
     justify-content: space-between;
@@ -432,6 +437,235 @@ body {
 }
 
 /* About */
-.about{
+.about-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-section h4 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.about-section ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.amenities-section {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+
+}
+
+.amenities-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-right: 60px;
+}
+
+
+.amenity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+    width: 100px;
+}
+
+.amenity i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #0071c2;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #0071c2;
+    text-decoration: none;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* Have a Que */
+
+.question-box {
+    max-width: 90%;
+    background-color: #e6f1ff;
+    border-radius: 8px;
     margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+.question-box h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+.question-box p {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+}
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #0077cc;
+    font-size: 1.2em;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* padding-left for icon space */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-button {
+    background-color: #8eb4fa;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button i {
+    color: #557e9b;
+    font-size: 1em;
+}
+
+.beta-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Rules and Info */
+
+h3 {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+.house-section {
+    margin-top: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+}
+.house-rules, .important-info, .faq {
+    display: flex;
+    flex-direction: column;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+.icons i {
+    margin-right: 10px;
+    color: #666;
+}
+.important-info p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+.faq-item {
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 5px 0;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq-item:hover {
+    color: #0066c0;
+}
+.faq-item i {
+    color: #666;
+}
+.refund-policy {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9em;
+}
+.refund-dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    color: #333;
 }
