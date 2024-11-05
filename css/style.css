@@ -11,11 +11,10 @@ body {
 
 .gallery-section,
 .property-section,
-.rooms-beds,
-.about-section,
-.amenities-section,
 .question-box,
-.rule-info {
+.rule-info,
+.review-section,
+.last-container{
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -218,10 +217,11 @@ body {
     margin-top: 20px;
 }
 
-.property-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.property-info,
+.amenities-grid  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
     
 }
 
@@ -247,12 +247,6 @@ body {
     margin-bottom: 10px;
 }
 
-.amenities-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px; /* Adjust for row and column spacing */
-}
-
 .amenities-grid div {
     display: flex;
     align-items: center;
@@ -270,19 +264,50 @@ body {
     text-decoration: none;
 }
 
-
-.explore-area h3 {
-    font-size: 18px;
-    margin-top: 20px;
+/*Explore Area*/
+.explore-container {
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
 }
-
-.explore-area ul {
+.map {
+    border: 1px solid rgb(224, 217, 217);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 250px;
+}
+.map img {
+    width: 100%;
+    height: auto;
+}
+.explore-info {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+.info-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.location-list {
     list-style: none;
     padding: 0;
 }
-
-.explore-area li {
-    margin: 5px 0;
+.location-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.location-item i {
+    margin-right: 10px;
+    color: #555;
+}
+.see-more {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
 }
 
 /* Right Column */
@@ -292,65 +317,142 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-
-.price-section {
-    text-align: center;
+/*Membership*/
+.membership{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #01070c;
+    color: white;
+}
+.membership-logo,
+.membership-text{
     padding: 10px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
+    margin: 20px;
 }
 
-.price-section .price {
-    font-size: 24px;
-    color: #333;
+.membership-logo i{
+    font-size:24px;
+    margin-top: 20px;
 }
-
-.price-section .cancellation,
-.price-section .availability {
-    color: #28a745;
-    font-size: 14px;
-}
-
-.booking-section {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.date-selection label {
-    display: block;
-    font-weight: bold;
+.button-signin-sec{
     margin-top: 10px;
 }
-
-.date-selection input,
-.date-selection select {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-    font-size: 16px;
+.signin-btn{
+    color: white;
+    background-color: #0066c0;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 25px;
 }
-
-.total-section {
-    text-align: center;
+/* Price Card*/
+.booking-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    border: 1px solid #e0e0e0;
+}
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.per-night {
+    color: #555;
+    font-size: small;
+}
+.free-cancellation {
+    color: #4caf50;
+    margin-top: 10px;
+}
+.info {
+    color: #555;
+    font-size: 0.9em;
+}
+.available {
+    color: black;
+    margin-top: 10px;
+    i{
+        color: #4caf50;
+    }
+}
+.date-select {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.date-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
     padding: 10px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
 }
-
-.total-section p {
-    font-size: 18px;
+.date-box:last-child {
+    margin-right: 0;
 }
+.travelers {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-weight: bold;
 
+    .small-text {
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+.price-details {
+    color: #0077cc;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+}
 .book-now {
     display: block;
-    background-color: #007bff;
-    color: #fff;
+    width: 100%;
     text-align: center;
-    padding: 10px;
-    text-decoration: none;
+    background-color: #0077cc;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
     font-weight: bold;
-    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.book-now:hover {
+    background-color: #005fa3;
+}
+.note {
+    color: #555;
+    font-size: 0.9em;
     margin-top: 10px;
+    text-align: center;
+}
+.contact-host {
+    text-align: center;
+    margin-top: 20px;
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+.property-number {
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    font-size: 0.9em;
 }
 
 /* */
@@ -442,47 +544,42 @@ body {
     margin-top: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    font-family: Arial, sans-serif;
+    color: #030303;
 }
 
 .about-section h2 {
     font-size: 24px;
-    color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .about-section h3 {
     font-size: 20px;
-    color: #444;
     margin-bottom: 10px;
 }
 
 .about-section p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
-    color: #555;
     margin-bottom: 15px;
 }
 
 .about-section h4 {
     font-size: 18px;
-    color: #333;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.about-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.policies-list {
+    list-style: none;
     margin-bottom: 15px;
+    font-size: 14px;
 }
-
-.about-section ul li {
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: #555;
+.property-img img{
+    width: 80px;
 }
-
+.property-img h6{
+    font-weight: 300;
+}
 .amenities-section {
     text-align: center;
     padding: 20px;
@@ -491,8 +588,8 @@ body {
 }
 
 .amenities-section h2 {
-    font-size: 1.5em;
-    color: #333;
+    font-size: 24px;
+    color: #030303;
     margin-right: 60px;
 }
 
@@ -612,30 +709,48 @@ body {
 
 /* Rules and Info */
 
-h3 {
+.rule-info h3 {
     font-weight: bold;
     color: #333;
     font-size: 1.2em;
 }
 .house-section {
+    display: flex;
     margin-top: 20px;
-    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 20px;
 }
-.house-rules, .important-info, .faq {
+
+.left-col,
+.right-col{
+    
+    margin-bottom: 50px;
+}
+.house-rules, .damage , .cancellation, .important-info, .faq {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+
+}
+.checkin-checkout-info1, 
+.checkin-checkout-info2{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.checkin-checkout-info1 p,
+.checkin-checkout-info2 div{
+    flex: 1 1 50%;
 }
 .icons {
-    display: flex;
+    display: block;
     align-items: center;
     margin-top: 5px;
     font-size: 0.9em;
-    color: #666;
+    color: #0a0a0a;
 }
 .icons i {
     margin-right: 10px;
-    color: #666;
+    color: #050505;
 }
 .important-info p {
     font-size: 0.9em;
@@ -643,18 +758,25 @@ h3 {
 }
 .faq-item {
     font-size: 0.9em;
-    cursor: pointer;
-    padding: 5px 0;
-    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    text-align: left;
+    
 }
-.faq-item:hover {
-    color: #0066c0;
-}
+
 .faq-item i {
-    color: #666;
+    color: #030303;
+    margin-right: 5px;
+}
+.refund-progress{
+    border: 1px solid black;
+    .timeline{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
 }
 .refund-policy {
     background-color: #f9f9f9;
@@ -668,4 +790,121 @@ h3 {
     align-items: center;
     margin-top: 5px;
     color: #333;
+}
+
+/* Reviews in Cards */
+.review-section{
+    display: flex;
+    margin-top: 20px;
+}
+
+.review-rating{
+
+    span{
+        color: #28a745;
+        font-weight: 400;
+    }
+
+    h2{
+        font-weight: 500;
+    }
+
+    h5, h6{
+        font-weight: 300;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.reviews-header {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.reviews {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.review-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    border: 1px solid #e0e0e0;
+    flex: 1;
+}
+.rating {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.review-text {
+    color: #555;
+    margin-bottom: 15px;
+}
+.read-more {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+.author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.date {
+    color: #888;
+    font-size: 0.9em;
+}
+.see-all {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #9b9d9e;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+.see-all:hover {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* Last two rows */
+.last-container {
+    margin-top: 60px;
+}
+.last-section {
+    
+    display: flex;
+}
+.section-title {
+    font-weight: bold;
+    margin-right: 550px;
+}
+.host-info ,
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.host-details {
+    
+}
+.languages {
+    margin-top: 50px;
+}
+.contact-button {
+    color: #0077cc;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #9b9d9e;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
 }
