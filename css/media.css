@@ -83,7 +83,46 @@
       display: block;
     }
     /*Cancellation Part*/
-   
+    .timeline-container {
+        flex-direction: column; /* Stack items vertically */
+        margin-bottom: 0px;
+    }
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 5%; /* Center vertically */
+        top: 2px;
+        height: 2px;
+        width: calc(100% - 40px); /* Full width minus left and right padding */
+        background-color: black;
+        z-index: 1;
+        transform: rotate(90deg);
+        transform-origin:  center; /* Change rotation origin */
+    }
+    
+    .timeline-container::after {
+        content: '';
+        position: absolute;
+        left: 5%; /* Center vertically */
+        bottom: calc(45% + 20px); /* Adjust to position accordingly */
+        height: 2px;
+        width: calc(100% - 40px); /* Full width minus left and right padding */
+        background-color: #ddd; /* Lighter ash color */
+        z-index: 1;
+        transform: rotate(90deg);
+        transform-origin:  center; /* Change rotation origin */
+    }
+
+    .timeline-item {
+        transform: rotate(90deg); /* Rotate items 90 degrees */
+        margin-bottom: 20px; /* Space between items */
+        /* Adjust alignment if needed */
+    }
+
+    /* Optional: Adjust the position of the circles */
+    .timeline-item .circle {
+        margin-bottom: 0px; /* More space for clarity */
+    }
     
     .review-section{   
         display: block;  
