@@ -1,0 +1,88 @@
+@media (max-width:375px) {
+    .navbar{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .navbar .phone-icon{
+        display: inline;
+    }
+    .nav-items{
+        display: none;
+    }
+    .gallery-section,
+    .property-section,
+    .question-box,
+    .rule-info,
+    .review-section,
+    .last-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .share-text{
+        display: none; 
+    }
+    .content{
+        display: block;
+        gap: 30px;
+    }   
+
+    .explore-container {
+        border-radius: 14px;
+        display: block;
+    }
+    .explore-info {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .location-list{
+        font-size: 10px;
+    }
+    .amenities-section ,
+    .amenities-grid{
+        display: block;
+        i{
+            font-size: 8px;
+            margin-right: 2px;
+        }
+    }
+
+    .house-rules, .damage , .cancellation, .important-info, .faq {
+        display: block;
+        row-gap: 2px;
+    
+    }
+    .checkin-checkout-info1, 
+    .checkin-checkout-info2
+    {
+      display: block;
+    }
+    .review-section{   
+        display: block;  
+    }
+    .review-container {
+        
+    }
+    .last-section {
+        display: block;
+    }
+    .contact-button {
+        margin-top: 20px;
+    }
+    .checkin-checkout-info2{
+        display: none;
+    }
+    .checkin-checkout-info1 .see-more ,
+    .right-col  .see-more{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1em;
+        color: #0077cc; /* Blue color for link */
+        text-decoration: none;
+    }
+
+    .right-col .faq-item:nth-child(2),
+    .right-col .faq-item:nth-child(3),
+    .right-col .faq-item:nth-child(4) {
+        display: none;
+    }
+}

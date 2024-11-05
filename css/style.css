@@ -7,10 +7,12 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .gallery-section,
 .property-section,
+.middle-section,
 .question-box,
 .rule-info,
 .review-section,
@@ -22,6 +24,7 @@ body {
 /* Navbar CSS*/
 .navbar {
     display: flex;
+    width: 100%;
     height: 75px;
     justify-content: flex-end;
     align-items: center;
@@ -29,7 +32,9 @@ body {
     background-color: white;
     box-shadow: 0 2px 0 rgba(0,0,0,0.15);
 }
-
+.navbar .phone-icon{
+    display: none;
+}
 .nav-items {
     display: flex;
     align-items: center;
@@ -731,6 +736,10 @@ body {
     row-gap: 20px;
 
 }
+.checkin-checkout-info1 .see-more ,
+.right-col .see-more{
+    display: none;
+}
 .checkin-checkout-info1, 
 .checkin-checkout-info2{
   display: flex;
@@ -814,7 +823,7 @@ body {
     }
 }
 
-.container {
+.review-container {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -878,7 +887,6 @@ body {
     margin-top: 60px;
 }
 .last-section {
-    
     display: flex;
 }
 .section-title {
