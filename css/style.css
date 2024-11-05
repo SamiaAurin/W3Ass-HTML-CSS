@@ -188,31 +188,35 @@ body {
 }
 
 .title-section h6 {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    color: #020202;
     margin: 0;
 }
 
 .title-section h1 {
-    font-size: 24px;
+    font-size: 60px;
+    font-weight: 600;
     color: black;
     margin: 5px 0;
 }
 
 .rating {
+    display: flex;
     margin-top: 10px;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 25px;
 }
 
 .rating-score {
     background-color: #1b4b27;
     color: #fff;
-    padding: 2px 8px;
+    padding: 5px ;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 15px;
+    margin-right: 10px;
 }
-.rating a {
+.see-review a {
     color: #007bff;
     text-decoration: none;
     display: block;
@@ -224,6 +228,7 @@ body {
 
 .property-info,
 .amenities-grid  {
+    margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 20px;
@@ -270,8 +275,13 @@ body {
 }
 
 /*Explore Area*/
+.explore
+{
+    margin-top: 20px;
+}
 .explore-container {
     border-radius: 14px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -327,7 +337,7 @@ body {
     display: flex;
     border: 1px solid black;
     border-radius: 12px;
-    background-color: #01070c;
+    background-color: #080330;
     color: white;
 }
 .membership-logo,
@@ -341,14 +351,15 @@ body {
     margin-top: 20px;
 }
 .button-signin-sec{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .signin-btn{
     color: white;
     background-color: #0066c0;
-    font-weight: 500;
+    font-weight: 600;
     padding: 10px 15px;
     border-radius: 25px;
+    border: none;
 }
 /* Price Card*/
 .booking-card {
@@ -364,8 +375,9 @@ body {
     font-weight: bold;
 }
 .per-night {
-    color: #555;
+    color: black;
     font-size: small;
+    font-weight: 300;
 }
 .free-cancellation {
     color: #4caf50;
@@ -616,6 +628,7 @@ body {
 
 .view-all {
     display: inline-block;
+    text-align: left;
     margin-top: 20px;
     font-size: 0.9em;
     color: #0071c2;
