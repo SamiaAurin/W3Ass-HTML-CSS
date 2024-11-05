@@ -1,4 +1,5 @@
 @media (max-width:375px) {
+
     .navbar{
         width: 100%;
         padding: 1rem 1rem;
@@ -11,15 +12,27 @@
     }
     .gallery-section,
     .property-section,
+    .middle-section,
     .question-box,
     .rule-info,
     .review-section,
     .last-container{
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 2px;
+        margin-right: 2px;
+        /*margin-left: 1rem;
+        margin-right: auto;*/
     }
     .share-text{
         display: none; 
+    }
+    /*Gallery pics*/
+    .photo-count{
+        right: 10px;
+    }
+    /**/
+    .title-section h1 {
+        font-size: 30px;
+        
     }
     .content{
         display: block;
@@ -33,9 +46,13 @@
     .explore-info {
         margin-left: 0px;
         margin-top: 15px;
+        margin-bottom: 10px;
     }
     .location-list{
         font-size: 10px;
+    }
+    .booking-card {
+       width: 330px;
     }
     .amenities-section ,
     .amenities-grid{
@@ -54,11 +71,20 @@
         row-gap: 2px;
     
     }
+    .left-col {
+        width: 0%;
+        margin-left: 18px;
+        margin-bottom: 20px;
+        padding-right: 20px;
+    }
     .checkin-checkout-info1, 
     .checkin-checkout-info2
     {
       display: block;
     }
+    /*Cancellation Part*/
+   
+    
     .review-section{   
         display: block;  
     }

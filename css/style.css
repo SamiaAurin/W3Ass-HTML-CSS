@@ -234,7 +234,6 @@ body {
     gap: 10px 20px;
     
 }
-
 .property-info .icon-text {
     display: flex;
     gap: 15px;
@@ -260,11 +259,6 @@ body {
 .amenities-grid div {
     display: flex;
     align-items: center;
-}
-
-.amenities-grid i {
-    color: #555;
-    margin-right: 8px;
 }
 
 .amenities a {
@@ -295,6 +289,9 @@ body {
     width: 100%;
     height: auto;
 }
+.map-text{
+    padding-left: 10px;
+}
 .explore-info {
     margin-left: 20px;
     flex-grow: 1;
@@ -319,7 +316,6 @@ body {
 }
 .see-more {
     color: #0077cc;
-    font-weight: bold;
     text-decoration: none;
     display: block;
     margin-top: 10px;
@@ -531,20 +527,12 @@ body {
     margin-bottom: 10px;
 }
 
-.spaces-list {
-    
-}
 
 .spaces-list div {
     display: flex;
     align-items: center;
     font-size: 16px;
     color: #333;
-}
-
-.spaces-list i {
-    color: #555;
-    margin-right: 8px;
 }
 
 .spaces a {
@@ -609,7 +597,6 @@ body {
     color: #030303;
     margin-right: 60px;
 }
-
 
 .amenity {
     display: flex;
@@ -726,21 +713,31 @@ body {
 }
 
 /* Rules and Info */
-
+.rule-info{
+    margin-top: 60px;
+}
 .rule-info h3 {
     font-weight: bold;
     color: #333;
     font-size: 1.2em;
+   
 }
 .house-section {
     display: flex;
     margin-top: 20px;
     padding-bottom: 20px;
 }
+.left-col {
+    width: 25%; /* Adjust the width as needed */
+    padding-right: 20px; /* Adds space between columns */
+}
 
+.right-col {
+    width: 70%; /* Adjust the width as needed */
+    padding-left: 20px; /* Adds padding to align the text */
+}
 .left-col,
 .right-col{
-    
     margin-bottom: 50px;
 }
 .house-rules, .damage , .cancellation, .important-info, .faq {
@@ -757,11 +754,11 @@ body {
 .checkin-checkout-info2{
   display: flex;
   flex-wrap: wrap;
-  
 }
 .checkin-checkout-info1 p,
 .checkin-checkout-info2 div{
     flex: 1 1 50%;
+    margin-bottom: 30px;
 }
 .icons {
     display: block;
@@ -791,26 +788,119 @@ body {
     color: #030303;
     margin-right: 5px;
 }
-.refund-progress{
-    border: 1px solid black;
-    .timeline{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-    }
+/* Cancalletion */
+ /* Container styling */
+ .refund-policy {
+
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
-.refund-policy {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 0.9em;
-}
-.refund-dates {
+
+/* Timeline section */
+.timeline-container {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Timeline line */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: black;
+    z-index: 1;
+}
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: calc(45% + 20px); /* Starts from the middle */
+    right: 20px; /* Ends at the right edge */
+    height: 2px;
+    background-color: #ddd; /* Lighter ash color */
+    z-index: 1;
+}
+/* Timeline items */
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    color: #333;
+    position: relative;
+}
+
+/* Circles styling */
+.timeline-item .circle {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+/* Open circle for "No refund" */
+.timeline-item .circle.open {
+    background-color: #f7f7f7;
+    border: 2px solid #333;
+}
+.timeline-item .circle.halfopen{
+    background-color: #f7f7f7;
+    border: 1px solid #a5a3a3;
+}
+
+/* Positioning "Full refund" and "No refund" above the line */
+.timeline-item.above {
+    position: relative;
+    top: -20px; /* Move this item up */
+}
+
+.timeline-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Refund details section */
+.refund-details {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.refund-details .refund-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+/* Date styling */
+.refund-details .refund-item .date {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+/* Description styling */
+.refund-details .refund-item .description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Bold text within description */
+.refund-details .refund-item .description b {
+    font-weight: bold;
     color: #333;
 }
 
@@ -909,14 +999,10 @@ body {
 .host-info ,
 .contact{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-.host-details {
-    
-}
+
 .languages {
     margin-top: 50px;
 }
@@ -927,5 +1013,4 @@ body {
     border: 1px solid #9b9d9e;
     padding: 10px 15px;
     border-radius: 25px;
-    transition: background-color 0.3s;
 }
