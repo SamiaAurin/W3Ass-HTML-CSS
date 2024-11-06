@@ -822,7 +822,7 @@ body {
     content: '';
     position: absolute;
     top: 35%;
-    left: calc(45% + 20px); /* Starts from the middle */
+    left: calc(50%); /* Starts from the middle */
     right: 20px; /* Ends at the right edge */
     height: 2px;
     background-color: #ddd; /* Lighter ash color */
@@ -987,6 +987,7 @@ body {
 /* Last two rows */
 .last-container {
     margin-top: 60px;
+    
 }
 .last-section {
     display: flex;

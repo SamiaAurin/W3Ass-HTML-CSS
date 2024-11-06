@@ -1,6 +1,7 @@
-@media (max-width:375px) {
 
-    .navbar{
+@media (max-width:768px){
+   /*Navbar CSS*/
+   .navbar{
         width: 100%;
         padding: 1rem 1rem;
     }
@@ -10,6 +11,8 @@
     .nav-items{
         display: none;
     }
+     
+    /*Margin of Sections*/
     .gallery-section,
     .property-section,
     .middle-section,
@@ -19,25 +22,63 @@
     .last-container{
         margin-left: 2px;
         margin-right: 2px;
-        /*margin-left: 1rem;
-        margin-right: auto;*/
     }
-    .share-text{
-        display: none; 
-    }
-    /*Gallery pics*/
-    .photo-count{
-        right: 10px;
-    }
-    /**/
-    .title-section h1 {
-        font-size: 30px;
-        
-    }
+
     .content{
         display: block;
         gap: 30px;
-    }   
+    } 
+    .location-list{
+        font-size: 10px;
+    }
+    .right-column{
+        margin-top: 30px;
+    }
+    .membership,
+    .booking-card{
+        width: 100%;
+    }
+    .middle-section{
+        padding: 10px;
+    } 
+    .question-box {
+        max-width: 100%;
+        padding: 5px;
+    }
+    
+    /*Rules about House Damage Cancellation FAQ*/
+    .rule-info {
+       padding: 5px;
+    }
+    /*Review*/
+    .review-section ,
+    .last-container{
+        display: block;
+        padding: 10px;
+    }
+    
+    .last-section{
+        display: block;
+    }
+    .section-title {
+        margin-right: 0px;
+    }
+}
+
+/*For Second Review Card*/
+@media (max-width: 539px) {
+    .review-section .second-review-card {
+        display: none; 
+    }
+}
+/*For Second Review Card ends*/
+/*Responsive For Mobile Devices*/
+@media (max-width:480px) {
+
+    /*Juneau Vacation Home: Stunning View + Beach Access*/
+    .title-section h1 {
+        font-size: 30px;  
+    }
 
     .explore-container {
         border-radius: 14px;
@@ -52,7 +93,7 @@
         font-size: 10px;
     }
     .booking-card {
-       width: 330px;
+       width: 100%;
     }
     .amenities-section ,
     .amenities-grid{
@@ -65,11 +106,15 @@
             font-size: 12px;
         }
     }
-
+    .amenities-section h2 {
+        text-align: left;
+    }
+    .middle-section{
+        padding: 10px;
+    }
     .house-rules, .damage , .cancellation, .important-info, .faq {
         display: block;
         row-gap: 2px;
-    
     }
     .left-col {
         width: 0%;
@@ -82,18 +127,24 @@
     {
       display: block;
     }
-    /*Cancellation Part*/
+    /*Cancellation Part Starts*/
     .timeline-container {
         flex-direction: column; /* Stack items vertically */
         margin-bottom: 0px;
+
+        p{
+                transform: rotate(270deg);
+                position: relative;        
+        }
+        
     }
     .timeline-container::before {
         content: '';
         position: absolute;
-        left: 5%; /* Center vertically */
-        top: 2px;
+        left: 53px; /* Center vertically */
+        right: 2px;
         height: 2px;
-        width: calc(100% - 40px); /* Full width minus left and right padding */
+        width: calc(50%); /* Full width minus left and right padding */
         background-color: black;
         z-index: 1;
         transform: rotate(90deg);
@@ -103,14 +154,14 @@
     .timeline-container::after {
         content: '';
         position: absolute;
-        left: 5%; /* Center vertically */
-        bottom: calc(45% + 20px); /* Adjust to position accordingly */
-        height: 2px;
-        width: calc(100% - 40px); /* Full width minus left and right padding */
-        background-color: #ddd; /* Lighter ash color */
+        left: 15px;
+        bottom: 30px;
+        height: 1px;
+        width: calc(88%);
+        background-color: red;
         z-index: 1;
         transform: rotate(90deg);
-        transform-origin:  center; /* Change rotation origin */
+        transform-origin: center;
     }
 
     .timeline-item {
@@ -118,12 +169,23 @@
         margin-bottom: 20px; /* Space between items */
         /* Adjust alignment if needed */
     }
-
+    /* Positioning "Today" and "Nov 4" and "Check in" */
+      .timeline-item.below{
+        top: 8px; /* Move this item up */
+        right: -35px;
+    } 
+    /* Positioning "Full refund" and "No refund" above the line */
+    .timeline-item.above {
+        top: 8px; /* Move this item up */
+        left: -35px;
+    } 
     /* Optional: Adjust the position of the circles */
     .timeline-item .circle {
         margin-bottom: 0px; /* More space for clarity */
+        position: relative;
+        top: 40px;
     }
-    
+    /*Cancellation Part Ends*/
     .review-section{   
         display: block;  
     }
@@ -153,4 +215,7 @@
     .right-col .faq-item:nth-child(4) {
         display: none;
     }
+
 }
+
+

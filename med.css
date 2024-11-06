@@ -1,0 +1,54 @@
+@media (max-width:480px) {
+    .navbar{
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    .navbar .phone-icon{
+        display: inline;
+    }
+    .nav-items{
+        display: none;
+    }
+    .gallery-section,
+    .property-section,
+    .middle-section,
+    .question-box,
+    .rule-info,
+    .review-section,
+    .last-container{
+   
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .share-text{
+        display: none; 
+    }
+    /*Gallery pics*/
+    .photo-count{
+        right: 10px;
+    }
+
+    .content{
+        display: block;
+        gap: 30px;
+    } 
+    
+    .review-section,
+    .last-container{
+        padding: 10px;
+    }
+    .review-section ,
+    .last-container{
+        display: block;
+    }
+    .review-section .second-review-card{
+        display: none;
+    } 
+    .last-section{
+        display: block;
+    }
+    .section-title {
+        margin-right: 0px;
+    }
+
+}
