@@ -789,7 +789,7 @@ body {
     margin-right: 5px;
 }
 /* Cancalletion */
- /* Container styling */
+
  .refund-policy {
     font-family: Arial, sans-serif;
     padding: 20px;
@@ -825,7 +825,7 @@ body {
     left: calc(50%); /* Starts from the middle */
     right: 20px; /* Ends at the right edge */
     height: 2px;
-    background-color: #ddd; /* Lighter ash color */
+    background-color: #9e9a9a; /* Lighter ash color */
     z-index: 1;
 }
 /* Timeline items */

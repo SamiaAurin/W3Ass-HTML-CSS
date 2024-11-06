@@ -64,6 +64,28 @@
         margin-right: 0px;
     }
 }
+@media (max-width: 625px) {
+    /* Timeline line */
+    .timeline-container::before, .timeline-container::after {
+        top: 64%; 
+    }
+
+    /* Timeline items */
+    .timeline-item {
+        margin: 10px 0; /* Adjust vertical spacing between timeline items */
+    }
+    .timeline-item p {
+       
+        font-size: 12px;
+    }
+    .timeline-item.below {
+        top: 25px; /* Adjust the upward position for above items */
+    }
+    /* Positioning "Full refund" and "No refund" above the line */
+    .timeline-item.above {
+        top: -15px; /* Adjust the upward position for above items */
+    }
+}
 
 /*For Second Review Card*/
 @media (max-width: 539px) {
@@ -72,9 +94,28 @@
     }
 }
 /*For Second Review Card ends*/
+
 /*Responsive For Mobile Devices*/
 @media (max-width:480px) {
 
+    .share-text{
+        display: none; 
+    }
+    /*
+    .gallery-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        position: absolute;
+        z-index: 1;
+    }
+    .gallery-grid {
+        display: flex;
+        gap: 8px;
+        height: 450px;
+        position: relative;
+    }*/
     /*Juneau Vacation Home: Stunning View + Beach Access*/
     .title-section h1 {
         font-size: 30px;  
@@ -88,6 +129,9 @@
         margin-left: 0px;
         margin-top: 15px;
         margin-bottom: 10px;
+    }
+    .map{
+        max-width: 100% 
     }
     .location-list{
         font-size: 10px;
@@ -127,7 +171,8 @@
     {
       display: block;
     }
-    /*Cancellation Part Starts*/
+    
+    /*Right Section/Card for Cancellation Rules */
     .timeline-container {
         flex-direction: column; /* Stack items vertically */
         margin-bottom: 0px;
@@ -139,58 +184,46 @@
         
     }
     .timeline-container::before {
-        content: '';
-        position: absolute;
-        left: 53px; /* Center vertically */
-        right: 2px;
-        height: 2px;
-        width: calc(50%); /* Full width minus left and right padding */
-        background-color: black;
-        z-index: 1;
+        top: 30%;
+        left: 25%;
+        width: calc(50%); 
         transform: rotate(90deg);
         transform-origin:  center; /* Change rotation origin */
     }
-    
+
     .timeline-container::after {
-        content: '';
-        position: absolute;
         left: 15px;
-        bottom: 30px;
-        height: 1px;
+        top: 55%;
         width: calc(88%);
-        background-color: red;
-        z-index: 1;
         transform: rotate(90deg);
         transform-origin: center;
     }
 
     .timeline-item {
-        transform: rotate(90deg); /* Rotate items 90 degrees */
-        margin-bottom: 20px; /* Space between items */
-        /* Adjust alignment if needed */
+        transform: rotate(90deg); 
+        margin-bottom: 20px; 
+        
     }
     /* Positioning "Today" and "Nov 4" and "Check in" */
-      .timeline-item.below{
+    .timeline-item.below{
         top: 8px; /* Move this item up */
-        right: -35px;
+        right: -41px;
     } 
     /* Positioning "Full refund" and "No refund" above the line */
     .timeline-item.above {
-        top: 8px; /* Move this item up */
+        top: 8px; 
         left: -35px;
     } 
-    /* Optional: Adjust the position of the circles */
+    /* position of the circles */
     .timeline-item .circle {
-        margin-bottom: 0px; /* More space for clarity */
+        margin-bottom: 0px; 
         position: relative;
-        top: 40px;
+        top: 48px;
     }
-    /*Cancellation Part Ends*/
+
+    /*Review And LastSection*/
     .review-section{   
         display: block;  
-    }
-    .review-container {
-        
     }
     .last-section {
         display: block;
@@ -218,4 +251,47 @@
 
 }
 
+/*Media Query for 375px*/
+/*Right Section/Card for Cancellation Rules */
+@media (max-width: 375px) {
+    .timeline-container {
+        flex-direction: column; /* Stack items vertically */
+        margin-bottom: 0px;
 
+        p{
+                transform: rotate(270deg);
+                position: relative;        
+        }
+        
+    }
+    .timeline-container::before {
+        top: 33%;
+        left: 27%;
+        
+    }
+
+    .timeline-container::after {
+        left: 15px;
+        top: 55%;
+        width: calc(88%);
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+
+    /* Positioning "Today" and "Nov 4" and "Check in" */
+    .timeline-item.below{
+        right: -45px;
+    } 
+    /* Positioning "Full refund" and "No refund" above the line */
+    .timeline-item.above {
+        top: 8px; 
+        left: -35px;
+    } 
+    /* position of the circles */
+    .timeline-item .circle {
+        margin-bottom: 0px; 
+        position: relative;
+        top: 48px;
+    }
+
+} 
